@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@900&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: dimgray;
+    color: lightslategrey;    
+    
+}
+.container{
+    background-color: blanchedalmond;
+    transform-origin:top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+.container img {
+    max-width: 100%;
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 0.5s linear;
+    position: relative;
+}
+
+.circle button {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    color: aliceblue;
+    cursor: pointer;
+}
+/* .circle button:focus{
+    outline: none;
+} */
+
+.circle button#open{
+    left: 60%;
+}
+
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+.container.show-nav{
+    transform: rotate(-20deg);
+}
